@@ -1,0 +1,16 @@
+:root { font-family: system-ui, sans-serif; color: #182230; background: #f3f6fb; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+.page { width: min(1080px, 92vw); margin: 0 auto; padding: 4rem 0; }
+.hero { padding: 3rem; border-radius: 1.5rem; background: linear-gradient(130deg, #102a43, #205e85); color: white; }
+.eyebrow { letter-spacing: .16em; font-size: .8rem; font-weight: 700; opacity: .8; }
+h1 { font-size: clamp(2rem, 5vw, 4rem); line-height: 1.08; max-width: 800px; margin: 1rem 0; }
+.lead { font-size: 1.25rem; max-width: 720px; opacity: .9; }
+.button { display: inline-block; margin-top: 1.5rem; padding: .85rem 1.25rem; background: #fff; color: #154c70; border-radius: .65rem; text-decoration: none; font-weight: 700; }
+.pipeline { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; margin: 2rem 0; }
+.pipeline article { background: white; padding: 1.5rem; border-radius: 1rem; box-shadow: 0 10px 24px #1930470c; }
+.pipeline article span { color: #2779a7; font-weight: 800; }
+.pipeline h2 { margin: .5rem 0; }
+.pipeline p { color: #526071; line-height: 1.6; }
+footer { color: #637183; padding: 1rem 0; }
+@media (max-width: 720px) { .page { padding: 2rem 0; } .hero { padding: 2rem; } .pipeline { grid-template-columns: 1fr; } }
