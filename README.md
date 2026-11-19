@@ -29,3 +29,7 @@ SVG схемы отчёта находятся в report_figures/. Схемы н
 
 ## Локальная верификация
 Успешно выполнены npm ci, npm run lint (5 JS files checked), npm test (3 tests passed) и npm run build. YAML workflows разобраны локально без ошибок.
+
+
+## Skip CI verification
+This README change was committed with the commit message containing `[skip ci]` to demonstrate the CI skip directive. The Actions workflow should not run for that documentation commit.
