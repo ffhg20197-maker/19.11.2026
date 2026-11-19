@@ -7,3 +7,6 @@ export const pipelineStages = [
 export function isPipelineReady(stages = pipelineStages) {
   return Array.isArray(stages) && stages.length === 3 && stages.every((stage) => stage.name && stage.command);
 }
+
+// Intentional syntax error for CI error-detection demonstration.
+export const deliberatelyBroken = ;
