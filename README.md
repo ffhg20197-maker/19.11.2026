@@ -14,22 +14,21 @@ npm run lint
 npm test
 npm run build
 ```
-Проект использует Node.js built-in tooling (без сторонних пакетов): синтаксическую проверку, Node test runner и сборочный скрипт. Это делает npm ci воспроизводимым и независимым от внешнего registry.
+Проект использует Node.js built-in tooling (без сторонних пакетов): синтаксическую проверку, Node test runner и скрипт сборки.
 
 ## Workflow
 - .github/workflows/basic-ci.yml
 - .github/workflows/quality-gate.yml
 - .github/workflows/enterprise-ci.yml
 
-## Skip CI
-Для commit документации можно использовать сообщение [skip ci], например [skip ci] Update README. README не входит в paths фильтр Quality Gate.
-
-## Иллюстрации
-SVG схемы отчёта находятся в report_figures/. Схемы не являются скриншотами GitHub UI. Word отчёт создан отдельно. Реальные облачные прогоны, matrix jobs и downloadable artifacts должны подтверждаться вкладкой Actions после запуска.
-
-## Локальная верификация
-Успешно выполнены npm ci, npm run lint (5 JS files checked), npm test (3 tests passed) и npm run build. YAML workflows разобраны локально без ошибок.
-
+## Реальные проверки Actions
+- Basic CI main: https://github.com/ffhg20197-maker/19.11.2026/actions/runs/44450322988 — success.
+- Quality Gate feature/quality-validation: https://github.com/ffhg20197-maker/19.11.2026/actions/runs/44450510942 — success, artifact опубликован.
+- Enterprise Matrix main: https://github.com/ffhg20197-maker/19.11.2026/actions/runs/44450322984 — 6/6 matrix jobs и production build success.
+- Intentional lint error demo: https://github.com/ffhg20197-maker/19.11.2026/actions/runs/44450894342 — lint failed as expected; tests/build/artifact skipped. Main branch remains clean.
 
 ## Skip CI verification
-This README change was committed with the commit message containing `[skip ci]` to demonstrate the CI skip directive. The Actions workflow should not run for that documentation commit.
+README commit with [skip ci] was tested; no workflow run was created for the skip commit. README is not part of the Quality Gate paths filter.
+
+## Report figures
+SVG схемы находятся в report_figures/. Они иллюстративные и не являются скриншотами GitHub UI. Word отчёт доступен в отдельном архиве/файле.
