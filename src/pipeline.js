@@ -7,3 +7,5 @@ export const pipelineStages = [
 export function isPipelineReady(stages = pipelineStages) {
   return Array.isArray(stages) && stages.length === 3 && stages.every((stage) => stage.name && stage.command);
 }
+
+// CI branch validation: workflow path filters and quality steps are exercised.
